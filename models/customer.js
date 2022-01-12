@@ -6,10 +6,10 @@ const customerSchema = mongoose.Schema({
         // required: [true, "NAME IS REQUIRED!"],
         // min: [10, "MINIMUM 10 CHARACTERS ARE REQUIRED!"]
     },
-    permission: {
+    permissions: {
         type: Array,
         // required: true
     }
-});
+}, { versionKey: false });
 
 module.exports = mongoose.model("Customer", customerSchema);

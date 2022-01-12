@@ -3,6 +3,7 @@ const express = require("express");
 // creating a database using the mongoose
 const mongoose = require("mongoose");
 const body_parser = require("body-parser");
+var cors = require('cors');
 
 //////////////////////// DATABASE CONNECTION ////////////////////////
 
@@ -28,6 +29,7 @@ const superAdminRoutes = require("./routes/super-admin-routes");
 const app = express();
 // setting up the server to accept the JSON
 app.use(express.json());
+// app.use(app.use(cors({origin: true, credentials: true})));
 
 // MIDDLEWARE
 app.use("/", adminRoutes);

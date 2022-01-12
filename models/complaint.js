@@ -28,10 +28,6 @@ const complaintSchema = mongoose.Schema({
     status: {
         type: String
     },
-    customer_id: {
-        type: String,
-        unique: true
-    }
-});
+}, { versionKey: false });
 
 module.exports = mongoose.model("Complaint", complaintSchema);
